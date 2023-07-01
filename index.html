@@ -8,23 +8,45 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="build/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     </head>
     <body>
-        <div class="wrapper_outer">
-          <div class="wrapper">
-        
-            <section class="parallax_section">
-              <div class="parallax_bg1"></div>
-              <h2>CSS3 <br> Parallax Effect</h2>
-            </section>
-            <section class="parallax_section">
-              <div class="parallax_bg2"></div>
-              <h2>Creative <br> Parallax Effect</h2>
-            </section>	
-        
-          </div>
+    
+      <img class="thumbnail" src="asset/style/img/pexels-pixabay-159291.jpg" alt="image">
+  <section class="content">
+    <h2>Contenu de la section suivante</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id aliquam lectus, ac laoreet urna. Vivamus varius sagittis dui, sed euismod lacus mollis vel. Nullam et velit urna.</p>
+  </section>
+
+  <section>
+    <div class="container discover">
+      <div class="row">
+        <div class="col-6 text-center"><img src="asset/style/img/pexels-toa-heftiba-şinca-1194400.jpg" class="imgDiscover"></div>
+        <div class="col-6">
+          <h2 class="ms-5">GUINESS AT</h2>
+          <h2 class="">HOME</h2>
+          <p class="mt-5">Discover the magic of Guinness at home. From mastering
+            your pour, to using new innovations like Guinness
+            Nitrosurge and MicroDraught to emulate that perfect pint
+            of Guinness Draught in the comfort of your own home, 
+           we've got you covered</p>
+          <div class="button mt-5">< Find Out More</div>
         </div>
-        
+      </div>
+    </div>
+  </section>
+
+
+  <img src="asset/style/img/bar-ge893ec881_1280.jpg" class="largeImg">
+  <h2 class="text1">THE STORY OF</h2>
+  <h2 class="text2">ENTRACTE</h2>
+
+
+  <section>
+
+  </section>
+        <script>var image = document.getElementsByClassName('thumbnail');
+          new simpleParallax(image)</script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     </body>
 </html>

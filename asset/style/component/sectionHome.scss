@@ -1,0 +1,16 @@
+body {
+    background-color: $background-color !important;
+    color: $main-color;
+}
+
+.thumbnail {
+    height: 1300px;
+    width: 100vw;
+    object-fit: cover;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
