@@ -1,0 +1,43 @@
+.titleBeer {
+    color: $main-color !important;
+    margin-top: 250px;
+
+    h2 {
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 160px;
+        font-weight: 900;
+        line-height: .95;
+    }
+
+    h3 {
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 44px;
+        font-weight: 900;
+        line-height: 1.05;
+    }
+
+}
+.container-fluid {
+
+     .beerCorona {
+        height: 800px;
+        width: 750px;
+    }
+    
+     .flag {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .textCorona p{
+        margin-top: 150px !important;
+        color: $main-color !important;
+    }
+}
+

@@ -26,26 +26,68 @@
     </header>
 
 
-    <!-- sectionHome -->
 
-    <img class="thumbnail imgHome" src="asset/style/img/pexels-pixabay-159291.jpg" alt="image">
-    <div class="textOverlay">
-        <h1>L'ENTRACTE</h1>
-        <p>Découvre des bières artisanales de plus de 50 pays différents</p>
-        <a>
-            <div class="store">STORE</div>
-        </a>
-    </div>
 
-    <script src="" async defer></script>
-</body>
+
+
+<div class="container titleBeer">
+    <h2 class="text-center">Corona</h2>
+    <h3 class="text-center">PALE LAGER</h3>
+</div>
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4"><img src="asset/style/img/corona.png" class="beerCorona"></div>
-        <div class="col-4"></div>
+        
+        <div class="col-6 mx-auto text-center"><img src="asset/style/img/corona.png" class="beerCorona"></div>
+        <div class="col-6 textCorona">
+            <p>
+La Red Ale classique est sans doute,
+ avec la Guinness, la bière irlandaise la plus connue.
+  Pourtant, cette bière est née d'un coup de marketing :
+   lorsque l'on a commencé à exporter la Smithwick's au début des années 80,
+    presque personne sur le continent européen ne pouvait prononcer correctement 
+    son nom. On a cherché un nouveau nom et on a trouvé Kilkenny. C'est ainsi que la bière
+     irlandaise rouge-brun s'appelle désormais comme la ville d'où elle vient à l'origine.
+      La Kilkenny est tirée à l'azote, ce qui lui confère une mousse fine et abondante.
+    </p>
+    <div><img src="asset/style/img/mx.png" class="flag">MEXICO</div>
+        </div>
     </div>
 </div>
 
+<script>
+    
+    //navbar
+    window.addEventListener("scroll", function () {
+      let header = document.querySelector('header');
+      header.classList.toggle('sticky', window.scrollY > 0);
+    })
+
+    const menuToggle = document.querySelector('.menu-hamburger');
+    const menuBg = document.querySelector('.menu-bg');
+    const menu = document.querySelector('.menu');
+
+    menuToggle.addEventListener('click', function () {
+      menu.classList.toggle('menu-open');
+      menuBg.classList.toggle('menu-bg-open');
+      document.body.classList.toggle('menu-open');
+    });
+
+    menuBg.addEventListener('click', function () {
+      menu.classList.remove('menu-open');
+      menuBg.classList.remove('menu-bg-open');
+      document.body.classList.remove('menu-open');
+    });
+
+    menu.addEventListener('click', function (event) {
+      // Vérifie si un lien à l'intérieur du menu a été cliqué
+      if (event.target.tagName === 'A') {
+        menu.classList.remove('menu-open');
+        menuBg.classList.remove('menu-bg-open');
+        document.body.classList.remove('menu-open');
+      }
+    });
+
+</script>
+</body> 
 </html>
