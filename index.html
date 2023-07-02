@@ -15,7 +15,6 @@
 <body>
   <header>
     <a href="#" class="logo">Logo</a>
-    <!-- <input type="checkbox" id="menu-toggle"> -->
     <label for="menu-toggle" class="menu-hamburger">&#9776;</label>
     <div class="menu-bg"></div>
     <ul class="menu">
@@ -26,6 +25,8 @@
       <li><a href="#">Contact</a></li>
     </ul>
   </header>
+
+
   <!-- sectionHome -->
 
   <img class="thumbnail imgHome" src="asset/style/img/pexels-pixabay-159291.jpg" alt="image">
@@ -169,13 +170,16 @@
 
         <script>
           let image = document.getElementsByClassName('thumbnail');
-new simpleParallax(image, {
-  scale: 1.5, // Ajustez la valeur pour un effet de zoom plus prononcé (1 = aucun zoom)
-  delay: 0.6, // Ajustez la valeur pour une vitesse de défilement plus lente (0 = aucune pause)
-  transition: 'cubic-bezier(0,0,0,1)', // Ajustez la valeur pour une transition plus fluide (consultez la documentation pour d'autres options)
-});
+          new simpleParallax(image, {
+            scale: 1.5, // Ajustez la valeur pour un effet de zoom plus prononcé (1 = aucun zoom)
+            delay: 0.6, // Ajustez la valeur pour une vitesse de défilement plus lente (0 = aucune pause)
+            transition: 'cubic-bezier(0,0,0,1)', // Ajustez la valeur pour une transition plus fluide (consultez la documentation pour d'autres options)
+          });
 
-
+          window.addEventListener("scroll", function() {
+            let header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+          })
 
           const menuToggle = document.querySelector('.menu-hamburger');
           const menuBg = document.querySelector('.menu-bg');
@@ -213,7 +217,9 @@ new simpleParallax(image, {
 
 
         </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+          integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
           integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
