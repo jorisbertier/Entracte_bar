@@ -1,0 +1,47 @@
+.secondSection .row div {
+    padding: 0;
+    margin: 0 ;
+    height: 600px;
+    color: $main-color;
+    .imgSecondSection {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+    }
+    .imgSecondSection1 {
+        box-shadow: -15px 12px 3px 1px $secondary-color;
+    }
+    .imgSecondSection2 {
+        box-shadow: 15px -12px 3px 1px $secondary-color;
+    }
+}
+
+.blocClip {
+
+    .imgClip {
+        object-fit: cover;
+        height: 300px;
+        width: 100%;
+        border-radius: 2.5rem 0 9.375rem;
+    }
+    .text-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+}
+
+// .distort-image {
+//     display: block;
+//     width: 100%;
+//     height: auto;
+//     transition: transform 0.5s ease;
+//   }
+  
+//   .distort-image:hover {
+//     filter: url("#liquid-distortion");
+//   }
