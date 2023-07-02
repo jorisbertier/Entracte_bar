@@ -14,7 +14,7 @@
 
 <body>
   <header>
-    <a href="#" class="logo">Logo</a>
+    <a href="#" class="logo"><img src="asset/style/img/logo1.png"></a>
     <label for="menu-toggle" class="menu-hamburger">&#9776;</label>
     <div class="menu-bg"></div>
     <ul class="menu">
@@ -31,42 +31,42 @@
 
   <img class="thumbnail imgHome" src="asset/style/img/pexels-pixabay-159291.jpg" alt="image">
   <div class="textOverlay">
-    <h3>Texte superposé</h3>
-    <p>Ceci est du texte superposé sur l'image.</p>
+    <h3>L'ENTRACTE</h3>
+    <p>Découvre des bières artisanales de plus de 50 pays différents</p>
   </div>
-  <section class="content">
+  <!-- <section class="content">
     <h2>Contenu de la section suivante</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id aliquam lectus, ac laoreet urna. Vivamus varius
       sagittis dui, sed euismod lacus mollis vel. Nullam et velit urna.</p>
-  </section>
-  <section>
+  </section> -->
+  
+  <!-- <section>
 
     <div class="circle">
-      <img src="asset/style/img/pexels-ketut-subiyanto-5055812.jpg" class="imgCircle">
+      <img src="asset/style/img/beer.png" class="imgCircle">
       <div class="textCircle">
         <p>Pour plus d'informations- Cliquez ici -</p>
       </div>
       </img>
-  </section>
+  </section> -->
 
 
   <!-- firstSection -->
 
-  <section>
-    <div class="container discover">
-      <div class="row">
-        <div class="col-6 text-center"><img src="asset/style/img/pexels-toa-heftiba-şinca-1194400.jpg"
-            class="imgDiscover thumbnail"></div>
+  <section class=" d-flex align-items-center">
+    <div class="container discover mt-5">
+      <div class="row d-flex">
+        <div class="col-6 text-center"><img src="asset/style/img/pexels-toa-heftiba-şinca-1194400.jpg" class="imgDiscover"></div>
         <div class="col-6">
-          <h2 class="ms-5">GUINESS AT</h2>
+          <h2 class="ms-5">ENTRACT IN YOUR</h2>
           <h2 class="">HOME</h2>
-          <p class="mt-5">Discover the magic of Guinness at home. From mastering
-            your pour, to using new innovations like Guinness
+          <p class="mt-5">Discover the magic of Entract at home. From mastering
+            your pour, to using new innovations like Entract
             Nitrosurge and MicroDraught to emulate that perfect pint
             of Guinness Draught in the comfort of your own home,
             we've got you covered</p>
           <div class="button mt-5">
-            < Find Out More</div>
+            <i class="fa-solid fa-arrow-left"></i> Discover more</div>
           </div>
         </div>
       </div>
@@ -74,13 +74,13 @@
 
 
   <div class="image-container">
-    <img src="asset/style/img/bar-ge893ec881_1280.jpg" class="largeImg thumbnail">
-    <div class="text-container d-flex justify-content-center flex-column align-items-center">
+    <img src="asset/style/img/test3.png" class="largeImg thumbnail">
+    <div class="text-container d-flex flex-column align-items-center">
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
         corporis deserunt optio, cum quibusdam deleniti voluptate ea quae et.
         Illo, ex nulla. Maxime eius illum quis sapiente labore, aperiam culpa.</p>
-      <div class="button mt-5">
-        < Find Out More</div>
+      <div class="button mt-5 w-100">
+        <i class="fa-solid fa-arrow-left"></i> Discover more</div>
       </div>
     </div>
     <h2 class="text1">THE STORY OF</h2>
@@ -96,9 +96,9 @@
             class="imgSecondSection imgSecondSection1">
         </div>
 
-        <div class="col-6">
-          <div class="d-flex flex-column justify-content-center w-100 align-items-center">
-            <h2 class="ms-5">GUINESS AT</h2>
+        <div class="col-6 d-flex textSecondSection">
+          <div class="d-flex flex-column justify-content-center w-100 mt-5 pt-5">
+            <h2 class="ms-5">ENTRACT IN YOUR</h2>
             <h2 class="">HOME</h2>
             <p class="mt-5">Discover the magic of Guinness at home. From mastering
               your pour, to using new innovations like Guinness
@@ -106,7 +106,7 @@
               of Guinness Draught in the comfort of your own home,
               we've got you covered</p>
             <div class="button mt-5">
-              < Find Out More</div>
+              <i class="fa-solid fa-arrow-left"></i> Find Out More</div>
             </div>
           </div>
 
@@ -117,7 +117,7 @@
         <div class="row">
 
           <div class="col-6">
-            <div class="d-flex flex-column justify-content-center w-100 align-items-center">
+            <div class="d-flex flex-column justify-content-center w-100 mt-5 pt-5">
               <h2 class="ms-5">GUINESS AT</h2>
               <h2 class="">HOME</h2>
               <p class="mt-5">Discover the magic of Guinness at home. From mastering
@@ -126,7 +126,7 @@
                 of Guinness Draught in the comfort of your own home,
                 we've got you covered</p>
               <div class="button mt-5">
-                < Find Out More</div>
+                Find Out More <i class="fa-solid fa-arrow-right"></i> </div>
               </div>
             </div>
             <div class="col-6"><img src="asset/style/img/pexels-victor-freitas-573910.jpg"
@@ -171,7 +171,13 @@
         <script>
           let image = document.getElementsByClassName('thumbnail');
           new simpleParallax(image, {
-            scale: 1.5, // Ajustez la valeur pour un effet de zoom plus prononcé (1 = aucun zoom)
+            scale: 1.4, // Ajustez la valeur pour un effet de zoom plus prononcé (1 = aucun zoom)
+            delay: 0.6, // Ajustez la valeur pour une vitesse de défilement plus lente (0 = aucune pause)
+            transition: 'cubic-bezier(0,0,0,1)', // Ajustez la valeur pour une transition plus fluide (consultez la documentation pour d'autres options)
+          });
+          let image2 = document.getElementsByClassName('thumbnail2');
+          new simpleParallax(image2, {
+            scale: 1.3, // Ajustez la valeur pour un effet de zoom plus prononcé (1 = aucun zoom)
             delay: 0.6, // Ajustez la valeur pour une vitesse de défilement plus lente (0 = aucune pause)
             transition: 'cubic-bezier(0,0,0,1)', // Ajustez la valeur pour une transition plus fluide (consultez la documentation pour d'autres options)
           });
