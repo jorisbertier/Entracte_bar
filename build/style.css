@@ -44,9 +44,12 @@ header ul li a {
   text-decoration: none;
   color: white;
   letter-spacing: 2px;
-  font-weight: 500px;
+  font-weight: 500;
   transition: 0.6s;
   color: white !important;
+}
+header ul ul li a:hover {
+  color: #A6733D !important;
 }
 header .banner {
   position: relative;
@@ -57,9 +60,20 @@ header.sticky {
   padding: 5px 100px;
   background-color: white !important;
 }
+header.sticky ul li {
+  border-right: solid grey;
+}
 header.sticky ul li a,
 header.sticky .logo {
   color: #0A0406 !important;
+}
+header.sticky ul li a {
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.5;
+}
+header.sticky ul li a:hover {
+  color: #A6733D !important;
 }
 
 .imgHome {
@@ -194,7 +208,36 @@ body {
   z-index: 2;
   font-family: "Oswald";
 }
-.textOverlay h3, .textOverlay .h3 {
+.textOverlay .store {
+  height: 68px;
+  color: #0A0406;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: #A6733D;
+  border: 1px solid rgba(37, 13, 6, 0);
+  border-radius: 100px;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 24px 32px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: box-shadow 0.2s, border-radius 0.2s, border-color 0.2s, color 0.2s;
+  display: flex;
+  width: 140px;
+  transition: 1s;
+  cursor: pointer;
+}
+.textOverlay .store:hover {
+  background-color: white;
+  opacity: 0.2;
+}
+.textOverlay h1, .textOverlay .h1 {
   font-size: 88px;
   text-transform: uppercase;
 }
@@ -366,6 +409,12 @@ section {
   width: 100%;
   border-radius: 2.5rem 0 9.375rem;
 }
+.blocClip .imgClip2 {
+  object-fit: cover;
+  height: 300px;
+  width: 100% !important;
+  border-radius: 9.375rem 0 2.5rem 0;
+}
 .blocClip .text-overlay {
   position: absolute;
   top: 0;
@@ -375,25 +424,54 @@ section {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-swiper-container {
-  width: 100%;
-  height: 500px;
+.thirdSection h2, .thirdSection .h2 {
+  font-weight: 800;
+  font-size: 60px;
+  color: #A6733D;
 }
 
-swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.third {
+  position: relative;
 }
-
-swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
+.third .changeImg {
+  position: relative;
   object-fit: cover;
+  width: 100%;
+  height: 600px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+}
+.third .textOverlayChange {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-80%, -50%);
+}
+.third .titleChange1 {
+  margin-left: 200px;
+}
+.third h2, .third .h2 {
+  font-size: 120px;
+}
+.third .titleChange1, .third .titleChange2 {
+  cursor: pointer;
+  color: white;
+}
+.third .changeImg.fade-out {
+  opacity: 0;
+}
+.third .textOverlayChange {
+  /* Autres styles du texte... */
+  transition: opacity 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+.third .textOverlayChange.fade {
+  opacity: 0.5;
+  font-size: 0.9em;
+}
+
+footer {
+  background-color: #0A0406;
+  color: white;
 }
 
 /*!
