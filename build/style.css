@@ -475,8 +475,9 @@ footer {
 }
 
 .titleBeer {
-  color: white !important;
+  color: #D2BBA0 !important;
   margin-top: 250px;
+  background-color: white;
 }
 .titleBeer h2, .titleBeer .h2 {
   letter-spacing: 1px;
@@ -497,17 +498,133 @@ footer {
   line-height: 1.05;
 }
 
+.container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
+  background-color: white;
+  color: #0A0406;
+}
 .container-fluid .beerCorona, .container-xxl .beerCorona, .container-xl .beerCorona, .container-lg .beerCorona, .container-md .beerCorona, .container-sm .beerCorona {
   height: 800px;
-  width: 750px;
+  width: 200px;
+  margin-right: 50px;
 }
-.container-fluid .flag, .container-xxl .flag, .container-xl .flag, .container-lg .flag, .container-md .flag, .container-sm .flag {
+.container-fluid .flag, .container-xxl .flag, .container-xl .flag, .container-lg .flag, .container-md .flag, .container-sm .flag, .container-fluid .beer, .container-xxl .beer, .container-xl .beer, .container-lg .beer, .container-md .beer, .container-sm .beer {
   width: 30px;
   height: 30px;
 }
 .container-fluid .textCorona p, .container-xxl .textCorona p, .container-xl .textCorona p, .container-lg .textCorona p, .container-md .textCorona p, .container-sm .textCorona p {
   margin-top: 150px !important;
-  color: white !important;
+  color: #0A0406 !important;
+  margin-right: 70px;
+}
+.container-fluid .textCorona div, .container-xxl .textCorona div, .container-xl .textCorona div, .container-lg .textCorona div, .container-md .textCorona div, .container-sm .textCorona div {
+  color: #0A0406;
+}
+
+.selection h3, .selection .h3 {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.05;
+  color: #D2BBA0;
+}
+.selection .card {
+  border: none !important;
+  border-radius: 20px !important;
+  transition: 0.6s;
+}
+.selection .card .card-img-top {
+  height: 400px;
+  width: 100px;
+}
+.selection .card h5, .selection .card .h5 {
+  color: #D2BBA0;
+  font-weight: 800;
+  font-size: 25px;
+}
+.selection .card h6, .selection .card .h6 {
+  font-weight: 800;
+  color: #0A0406;
+  font-size: 20px;
+}
+.selection .card p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #0A0406;
+}
+.selection .card .card-button {
+  opacity: 0;
+  transition: opacity 0.6s ease-in;
+}
+.selection .card .buy {
+  height: 10px;
+  color: #0A0406;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: #D2BBA0;
+  border: 1px solid rgba(37, 13, 6, 0);
+  border-radius: 100px;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 24px 32px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  width: 140px;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.selection .card .buy i {
+  font-weight: 800 !important;
+  font-size: 25px;
+}
+
+.buy:hover {
+  background-color: white;
+  opacity: 0.7;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card:hover .card-button {
+  opacity: 1;
+}
+
+.productShop {
+  background-color: white !important;
+  height: 1500px;
+}
+.productShop h3, .productShop .h3 {
+  font-weight: 800;
+  color: #0A0406;
+  font-size: 60px;
+}
+
+.reveal {
+  /* position: relative; */
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: all 2s ease;
+}
+
+#sticky-section {
+  position: static;
+  z-index: 999;
 }
 
 /*!

@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="build/style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -30,64 +31,142 @@
 
 
 
-<div class="container titleBeer">
-    <h2 class="text-center">Corona</h2>
-    <h3 class="text-center">PALE LAGER</h3>
-</div>
-
-<div class="container-fluid">
-    <div class="row">
-        
-        <div class="col-6 mx-auto text-center"><img src="asset/style/img/corona.png" class="beerCorona"></div>
-        <div class="col-6 textCorona">
-            <p>
-La Red Ale classique est sans doute,
- avec la Guinness, la bière irlandaise la plus connue.
-  Pourtant, cette bière est née d'un coup de marketing :
-   lorsque l'on a commencé à exporter la Smithwick's au début des années 80,
-    presque personne sur le continent européen ne pouvait prononcer correctement 
-    son nom. On a cherché un nouveau nom et on a trouvé Kilkenny. C'est ainsi que la bière
-     irlandaise rouge-brun s'appelle désormais comme la ville d'où elle vient à l'origine.
-      La Kilkenny est tirée à l'azote, ce qui lui confère une mousse fine et abondante.
-    </p>
-    <div><img src="asset/style/img/mx.png" class="flag">MEXICO</div>
-        </div>
+    <div class="container-fluid titleBeer">
+        <h2 class="text-center">Corona</h2>
+        <h3 class="text-center">PALE LAGER</h3>
     </div>
-</div>
 
-<script>
-    
-    //navbar
-    window.addEventListener("scroll", function () {
-      let header = document.querySelector('header');
-      header.classList.toggle('sticky', window.scrollY > 0);
-    })
+    <div class="container-fluid pt-5">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 mx-auto text-center"><img src="asset/style/img/corona.png" class="beerCorona"></div>
+            <div class="col-4 textCorona">
+                <p>
+                    La Red Ale classique est sans doute,
+                    avec la Guinness, la bière irlandaise la plus connue.
+                    Pourtant, cette bière est née d'un coup de marketing :
+                    lorsque l'on a commencé à exporter la Smithwick's au début des années 80,
+                    presque personne sur le continent européen ne pouvait prononcer correctement
+                    son nom. On a cherché un nouveau nom et on a trouvé Kilkenny. C'est ainsi que la bière
+                    irlandaise rouge-brun s'appelle désormais comme la ville d'où elle vient à l'origine.
+                    La Kilkenny est tirée à l'azote, ce qui lui confère une mousse fine et abondante.
+                </p>
+                <div><img src="asset/style/img/mx.png" class="flag"> MEXICO</div>
+                <div class="bg-secondary d-flex align-items-end">
+                    <div class="me-3"><img src="asset/style/img/beerPicture.png" class="beer mt-5"></div>
+                    <div> 4.5° d'alcool</div>
+                </div>
+                <div class="bg-secondary d-flex align-items-end">
+                    <div class="me-3"><img src="asset/style/img/sigle.png" class="beer mt-5"></div>
+                    <div> 4.5° d'alcool</div>
+                </div>
+            </div>
+        </div>
 
-    const menuToggle = document.querySelector('.menu-hamburger');
-    const menuBg = document.querySelector('.menu-bg');
-    const menu = document.querySelector('.menu');
 
-    menuToggle.addEventListener('click', function () {
-      menu.classList.toggle('menu-open');
-      menuBg.classList.toggle('menu-bg-open');
-      document.body.classList.toggle('menu-open');
-    });
 
-    menuBg.addEventListener('click', function () {
-      menu.classList.remove('menu-open');
-      menuBg.classList.remove('menu-bg-open');
-      document.body.classList.remove('menu-open');
-    });
+        <div class="container selection mb-5 mt-5">
+            <div class="container-fluid text-center"><h3 class="text-center">VOUS POURRIEZ AIMER</h3></div>
+            <div class="row d-flex justify-content-center mt-5">
+                
+                <div class="col-3 d-flex justify-content-center">
+                    <div class="card text-center" style="width: 18rem;">
+                        <span class="pt-3"></span>
+                        <div class="text-center">
+                            <img class="card-img-top" src="asset/style/img/corona.png" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center mb-3">CORONA</h5>
+                            <h6>BIERE BLONDE</h6>
+                            <p class="card-text">4.6°</p>
+                            <div class="d-flex justify-content-center card-button"><a href="#" class="btn buy">SHOP<i class="bi bi-cart2 ms-2"></i></a></div>
+                        </div>
+                    </div>
+                </div>
 
-    menu.addEventListener('click', function (event) {
-      // Vérifie si un lien à l'intérieur du menu a été cliqué
-      if (event.target.tagName === 'A') {
-        menu.classList.remove('menu-open');
-        menuBg.classList.remove('menu-bg-open');
-        document.body.classList.remove('menu-open');
-      }
-    });
+                <div class="col-3 d-flex justify-content-center">
+                    <div class="card text-center" style="width: 18rem;">
+                        <span class="pt-3"></span>
+                        <div class="text-center">
+                            <img class="card-img-top" src="asset/style/img/corona.png" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center mb-3">CORONA</h5>
+                            <h6>BIERE BLONDE</h6>
+                            <p class="card-text">4.6°</p>
+                            <div class="d-flex justify-content-center card-button"><a href="#" class="btn buy">SHOP<i class="bi bi-cart2 ms-2"></i></a></div>
+                        </div>
+                    </div>
+                </div>
 
-</script>
-</body> 
+                <div class="col-3 d-flex justify-content-center">
+                    <div class="card text-center" style="width: 18rem;">
+                        <span class="pt-3"></span>
+                        <div class="text-center">
+                            <img class="card-img-top" src="asset/style/img/corona.png" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center mb-3">CORONA</h5>
+                            <h6>BIERE BLONDE</h6>
+                            <p class="card-text">4.6°</p>
+                            <div class="d-flex justify-content-center card-button"><a href="#" class="btn buy">SHOP<i class="bi bi-cart2 ms-2"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3 d-flex justify-content-center">
+                    <div class="card text-center" style="width: 18rem;">
+                        <span class="pt-3"></span>
+                        <div class="text-center">
+                            <img class="card-img-top" src="asset/style/img/corona.png" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center mb-3">CORONA</h5>
+                            <h6>BIERE BLONDE</h6>
+                            <p class="card-text">4.6°</p>
+                            <div class="d-flex justify-content-center card-button"><a href="#" class="btn buy">SHOP<i class="bi bi-cart2 ms-2"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <script>
+
+            //navbar
+            window.addEventListener("scroll", function () {
+                let header = document.querySelector('header');
+                header.classList.toggle('sticky', window.scrollY > 0);
+            })
+
+            const menuToggle = document.querySelector('.menu-hamburger');
+            const menuBg = document.querySelector('.menu-bg');
+            const menu = document.querySelector('.menu');
+
+            menuToggle.addEventListener('click', function () {
+                menu.classList.toggle('menu-open');
+                menuBg.classList.toggle('menu-bg-open');
+                document.body.classList.toggle('menu-open');
+            });
+
+            menuBg.addEventListener('click', function () {
+                menu.classList.remove('menu-open');
+                menuBg.classList.remove('menu-bg-open');
+                document.body.classList.remove('menu-open');
+            });
+
+            menu.addEventListener('click', function (event) {
+                // Vérifie si un lien à l'intérieur du menu a été cliqué
+                if (event.target.tagName === 'A') {
+                    menu.classList.remove('menu-open');
+                    menuBg.classList.remove('menu-bg-open');
+                    document.body.classList.remove('menu-open');
+                }
+            });
+
+        </script>
+</body>
+
 </html>
