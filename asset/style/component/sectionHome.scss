@@ -139,3 +139,39 @@ section {
         transform: rotate(0deg);
     }
  }
+
+
+ 
+ @media (max-width: 850px) {
+
+    .textOverlay {
+        
+        h1 {
+            font-size:70px;
+        }
+
+        p {
+            font-size: 30px;
+        }
+    }
+}
+
+@media (max-width: 490px) {
+    .textOverlay {
+        
+        h1 {
+            font-size:50px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .store {
+            height: 40px;
+            font-size: 12px;
+            width: 80px;
+        }
+    }
+
+}
