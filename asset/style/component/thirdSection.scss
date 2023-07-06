@@ -21,14 +21,25 @@
         padding: 20px;
         color: white;
         background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 2.5rem 0 9.375rem;
+    }
+    .text-overlay2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 20px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 9.375rem 0 2.5rem 0;
     }
 }
 
 .thirdSection {
+    background-color: $background-color!important;
     h2 {
         font-weight: 800;
         font-size: 60px;
-        color: $third-color;
+        color: $main-color;
     }
 }
 
@@ -38,7 +49,7 @@
     .changeImg {
         position: relative;
         object-fit: cover;
-        width: 100%;
+        // width: 100%;
         height: 600px;
         opacity: 0.5;
         transition: opacity 0.3s ease-in-out;
@@ -77,6 +88,35 @@
       }
 }
 
+@media (max-width: 1150px) {
+    .third {
+        h2 {
+            font-size: 70px;
+        }
+
+        .titleChange1 {
+            margin-left: 400px !important;
+        }
+        .titleChange2 {
+            margin-left: 200px !important;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .third {
+        h2 {
+            font-size: 45px;
+        }
+
+        .titleChange1 {
+            margin-left: 420px !important;
+        }
+        .titleChange2 {
+            margin-left: 400px !important;
+        }
+    }
+}
 
 
 // .distort-image {

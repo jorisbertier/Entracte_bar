@@ -37,9 +37,13 @@
         width: 30px;
         height: 30px;
     }
+
+    span {
+
+        margin-top: 150px !important;
+    }
     
     .textCorona p{
-        margin-top: 150px !important;
         color: $background-color !important;
         margin-right: 70px;
     }
@@ -61,71 +65,6 @@
         font-weight: 900;
         line-height: 1.05;
         color: $secondary-color;
-    }
-    
-    .card{
-        border:none !important;
-        border-radius: 20px!important;
-        transition: 0.6s;
-    
-        .card-img-top {
-            height: 400px;
-            width: 100px;
-        }
-    
-        h5 {
-            color: $secondary-color;
-            font-weight: 800;
-            font-size: 25px;
-        }
-    
-        h6 {
-            font-weight: 800;
-            color: $background-color;
-            font-size: 20px;
-        }
-    
-        p{
-            font-size: 20px;
-            font-weight: 500;
-            color: $background-color;
-        }
-    
-        .card-button{
-            opacity: 0;
-            transition: opacity 0.6s ease-in;
-        }
-        .buy {
-    
-            height: 10px;
-            color: $background-color;
-            letter-spacing: .6px;
-            text-transform: uppercase;
-            white-space: nowrap;
-            background-color: $secondary-color;
-            border: 1px solid rgba(37,13,6,0);
-            border-radius: 100px;
-            flex: none;
-            justify-content: center;
-            align-items: center;
-            margin-top: 0;
-            margin-left: 0;
-            margin-right: 0;
-            padding: 24px 32px;
-            font-size: 18px;
-            font-weight: 700;
-            text-decoration: none;
-            display: flex;
-            width: 140px;
-            cursor: pointer;
-            transition: 0.6s;
-    
-            & i{
-                font-weight: 800 !important;
-                font-size: 25px;
-            }
-        }
-    
     }
 
 }

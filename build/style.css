@@ -504,12 +504,25 @@ section {
   padding: 20px;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 2.5rem 0 9.375rem;
+}
+.blocClip .text-overlay2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 9.375rem 0 2.5rem 0;
 }
 
+.thirdSection {
+  background-color: #0A0406 !important;
+}
 .thirdSection h2, .thirdSection .h2 {
   font-weight: 800;
   font-size: 60px;
-  color: #A6733D;
+  color: white;
 }
 
 .third {
@@ -518,7 +531,6 @@ section {
 .third .changeImg {
   position: relative;
   object-fit: cover;
-  width: 100%;
   height: 600px;
   opacity: 0.5;
   transition: opacity 0.3s ease-in-out;
@@ -549,6 +561,86 @@ section {
 .third .textOverlayChange.fade {
   opacity: 0.5;
   font-size: 0.9em;
+}
+
+@media (max-width: 1150px) {
+  .third h2, .third .h2 {
+    font-size: 70px;
+  }
+  .third .titleChange1 {
+    margin-left: 400px !important;
+  }
+  .third .titleChange2 {
+    margin-left: 200px !important;
+  }
+}
+@media (max-width: 700px) {
+  .third h2, .third .h2 {
+    font-size: 45px;
+  }
+  .third .titleChange1 {
+    margin-left: 420px !important;
+  }
+  .third .titleChange2 {
+    margin-left: 400px !important;
+  }
+}
+.card {
+  border: none !important;
+  border-radius: 20px !important;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.card .card-img-top {
+  height: 250px;
+  width: 70px;
+}
+.card h5, .card .h5 {
+  color: #D2BBA0;
+  font-weight: 800;
+  font-size: 25px;
+}
+.card h6, .card .h6 {
+  font-weight: 800;
+  color: #0A0406;
+  font-size: 20px;
+}
+.card p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #0A0406;
+}
+.card .card-button {
+  opacity: 0;
+  transition: opacity 0.6s ease-in;
+}
+.card .buy {
+  height: 10px;
+  color: #0A0406;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: #D2BBA0;
+  border: 1px solid rgba(37, 13, 6, 0);
+  border-radius: 100px;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 24px 32px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  width: 140px;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.card .buy i {
+  font-weight: 800 !important;
+  font-size: 25px;
 }
 
 footer {
@@ -593,8 +685,10 @@ footer {
   width: 30px;
   height: 30px;
 }
-.container-fluid .textCorona p, .container-xxl .textCorona p, .container-xl .textCorona p, .container-lg .textCorona p, .container-md .textCorona p, .container-sm .textCorona p {
+.container-fluid span, .container-xxl span, .container-xl span, .container-lg span, .container-md span, .container-sm span {
   margin-top: 150px !important;
+}
+.container-fluid .textCorona p, .container-xxl .textCorona p, .container-xl .textCorona p, .container-lg .textCorona p, .container-md .textCorona p, .container-sm .textCorona p {
   color: #0A0406 !important;
   margin-right: 70px;
 }
@@ -611,62 +705,6 @@ footer {
   font-weight: 900;
   line-height: 1.05;
   color: #D2BBA0;
-}
-.selection .card {
-  border: none !important;
-  border-radius: 20px !important;
-  transition: 0.6s;
-}
-.selection .card .card-img-top {
-  height: 400px;
-  width: 100px;
-}
-.selection .card h5, .selection .card .h5 {
-  color: #D2BBA0;
-  font-weight: 800;
-  font-size: 25px;
-}
-.selection .card h6, .selection .card .h6 {
-  font-weight: 800;
-  color: #0A0406;
-  font-size: 20px;
-}
-.selection .card p {
-  font-size: 20px;
-  font-weight: 500;
-  color: #0A0406;
-}
-.selection .card .card-button {
-  opacity: 0;
-  transition: opacity 0.6s ease-in;
-}
-.selection .card .buy {
-  height: 10px;
-  color: #0A0406;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-  white-space: nowrap;
-  background-color: #D2BBA0;
-  border: 1px solid rgba(37, 13, 6, 0);
-  border-radius: 100px;
-  flex: none;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 24px 32px;
-  font-size: 18px;
-  font-weight: 700;
-  text-decoration: none;
-  display: flex;
-  width: 140px;
-  cursor: pointer;
-  transition: 0.6s;
-}
-.selection .card .buy i {
-  font-weight: 800 !important;
-  font-size: 25px;
 }
 
 .buy:hover {
