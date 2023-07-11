@@ -76,7 +76,7 @@ header.sticky .logo {
   color: #0A0406 !important;
 }
 header.sticky ul li a {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
   transition: 0.5;
 }
@@ -109,7 +109,7 @@ header.sticky ul li a:hover {
 }
 
 .menu li a {
-  color: black;
+  color: #0A0406;
   text-decoration: none;
 }
 
@@ -122,8 +122,8 @@ header.sticky ul li a:hover {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: white;
+  height: 100px;
+  backdrop-filter: blur(7px);
   opacity: 0;
   pointer-events: none;
   z-index: 99;
@@ -143,12 +143,15 @@ header.sticky ul li a:hover {
 
 .menu a {
   text-decoration: none;
-  color: black;
+  color: #0A0406;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .logo {
     font-size: 1.2em;
+  }
+  header.sticky ul li a {
+    color: white !important;
   }
   .menu-hamburger {
     display: block;
@@ -163,7 +166,7 @@ header.sticky ul li a:hover {
     right: 0;
     width: 100%;
     padding: 20px;
-    background-color: white;
+    backdrop-filter: blur(5px);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 999;
   }
@@ -179,6 +182,30 @@ header.sticky ul li a:hover {
     pointer-events: auto;
   }
 }
+.bi.bi-cart {
+  position: relative;
+}
+
+.bi.bi-cart::after {
+  content: "0";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 15px;
+  height: 15px;
+  background-color: #D2BBA0;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 15px;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
 body {
   background-color: #0A0406 !important;
   color: white;
@@ -449,7 +476,7 @@ section {
 }
 .secondSection .row div .imgSecondSection {
   width: 100%;
-  height: 100%;
+  height: 116%;
   object-fit: cover;
 }
 .secondSection .row div .imgSecondSection1 {
@@ -475,7 +502,7 @@ section {
 
 @media (max-width: 768px) {
   .secondSection .row div {
-    height: 350px;
+    height: 300px;
     margin-bottom: 30px;
   }
   .secondSection .row div i {
@@ -531,6 +558,7 @@ section {
 .third .changeImg {
   position: relative;
   object-fit: cover;
+  width: 100%;
   height: 600px;
   opacity: 0.5;
   transition: opacity 0.3s ease-in-out;
@@ -547,7 +575,8 @@ section {
 .third h2, .third .h2 {
   font-size: 120px;
 }
-.third .titleChange1, .third .titleChange2 {
+.third .titleChange1,
+.third .titleChange2 {
   cursor: pointer;
   color: white;
 }
@@ -585,6 +614,26 @@ section {
     margin-left: 400px !important;
   }
 }
+.discoverShop {
+  background-color: #0A0406 !important;
+}
+.discoverShop h2, .discoverShop .h2 {
+  font-weight: 800;
+  font-size: 60px;
+  color: white;
+}
+.discoverShop div .yo {
+  height: 400px;
+  width: 50px;
+  flex: 1;
+  transition: 0.3s;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.discoverShop div .yo:hover {
+  flex: 4;
+}
+
 .card {
   border: none !important;
   border-radius: 20px !important;
@@ -651,7 +700,8 @@ footer {
 
 .titleBeer {
   color: #D2BBA0 !important;
-  margin-top: 250px;
+  padding-top: 100px;
+  margin-top: 150px;
   background-color: white;
 }
 .titleBeer h2, .titleBeer .h2 {
@@ -680,7 +730,6 @@ footer {
 .container-fluid .beerCorona, .container-xxl .beerCorona, .container-xl .beerCorona, .container-lg .beerCorona, .container-md .beerCorona, .container-sm .beerCorona {
   height: 800px;
   width: 200px;
-  margin-right: 50px;
 }
 .container-fluid .flag, .container-xxl .flag, .container-xl .flag, .container-lg .flag, .container-md .flag, .container-sm .flag,
 .container-fluid .beer,
@@ -691,6 +740,10 @@ footer {
 .container-sm .beer {
   width: 30px;
   height: 30px;
+}
+.container-fluid .country, .container-xxl .country, .container-xl .country, .container-lg .country, .container-md .country, .container-sm .country {
+  font-weight: 600;
+  font-size: 18px;
 }
 .container-fluid span, .container-xxl span, .container-xl span, .container-lg span, .container-md span, .container-sm span {
   margin-top: 150px !important;
@@ -781,11 +834,11 @@ footer {
 .buttonAdd {
   background-color: #0A0406;
   color: white;
-  width: 100%;
   border: none;
   height: 50px;
   border-radius: 5px;
   font-size: 18px;
+  width: 100%;
 }
 .buttonAdd:hover {
   opacity: 0.5;
@@ -802,6 +855,24 @@ footer {
   }
   .titleBeer h3, .titleBeer .h3 {
     font-size: 25px;
+  }
+  .container-fluid .beerCorona, .container-xxl .beerCorona, .container-xl .beerCorona, .container-lg .beerCorona, .container-md .beerCorona, .container-sm .beerCorona {
+    height: 600px;
+    width: 150px;
+  }
+}
+@media (max-width: 600px) {
+  .container-fluid .beerCorona, .container-xxl .beerCorona, .container-xl .beerCorona, .container-lg .beerCorona, .container-md .beerCorona, .container-sm .beerCorona {
+    height: 400px;
+    width: 100px;
+  }
+}
+@media (max-width: 425px) {
+  .titleBeer h2, .titleBeer .h2 {
+    font-size: 60px;
+  }
+  .titleBeer h3, .titleBeer .h3 {
+    font-size: 20px;
   }
 }
 .productShop {

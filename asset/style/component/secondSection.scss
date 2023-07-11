@@ -5,7 +5,7 @@
     color: $main-color;
     .imgSecondSection {
         width: 100%;
-        height: 100%;
+        height: 116%;
         object-fit: cover;
         
     }
@@ -34,10 +34,9 @@
 
 @media (max-width: 768px) {
     .secondSection .row div {
-        height: 350px;
+        height: 300px;
         margin-bottom: 30px;
 
-        
         & i {
             visibility: hidden;
         }
