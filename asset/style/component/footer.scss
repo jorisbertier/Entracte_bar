@@ -1,4 +1,15 @@
 footer {
     background-color: $background-color;
-    color: $main-color;
+    color: $main-color !important;
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $third-color !important;
+    }
+
+    &__i {
+        text-decoration: none;
+    }
 }

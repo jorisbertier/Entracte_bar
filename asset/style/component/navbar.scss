@@ -19,6 +19,7 @@ header {
         text-transform: uppercase;
         letter-spacing: 2px;
         transition: 0.6s;
+        filter: brightness(0) invert(1);
 
         img {
           object-fit: cover;
@@ -77,6 +78,9 @@ header.sticky {
     background-color: $main-color !important;
     color: $background-color;
 
+    .logo {
+      filter: none;
+    }
     .menu-hamburger i {
       color: $background-color;
     }
