@@ -22,7 +22,11 @@
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Menu</a></li>
-            <li><a href="#"><i class="bi bi-cart me-2"></i>Shop</a></li>
+            <li>
+                <a href="#">Shop</a>
+                <i class="bi bi-cart me-2"></i>
+                <span class="badge">0</span>
+              </li>
         </ul>
     </header>
 
@@ -39,8 +43,7 @@
     <div class="container-fluid pt-5">
         <div class="row">
             <div class="col-xl-4 col-lg-12"></div>
-            <div class="col-xl-4 col-lg-12 text-center"><img src="asset/style/img/corona.png"
-                    class="beerCorona"></div>
+            <div class="col-xl-4 col-lg-12 text-center"><img src="asset/style/img/corona.png" class="beerCorona"></div>
             <div class="col-xl-4 col-lg-12 textCorona">
                 <span class="text-success font-weight-bold"><i class="bi bi-circle-fill"></i> Available</span>
                 <p class="mt-5">
@@ -78,9 +81,9 @@
                     </div>
 
                     <div class="containerQuantity d-flex col-6">
-                            <button id="btnMinus" class="button">-</button>
-                            <div id="quantity">0</div>
-                            <button id="btnPlus" class="button">+</button>
+                        <button id="btnMinus" class="button">-</button>
+                        <div id="quantity">0</div>
+                        <button id="btnPlus" class="button">+</button>
                     </div>
                     <div class="col-6 d-flex align-items-center justify-content-center">
                         <div id="price" class="price">0.0€</div>
@@ -207,6 +210,7 @@
             let btnMinus = document.getElementById('btnMinus');
             let btnPlus = document.getElementById('btnPlus');
             let priceElement = document.getElementById('price');
+            let cartContentDiv = document.querySelector(".badge");
 
             let quantity = 0;
             let price = 0;
@@ -215,6 +219,8 @@
                 quantityElement.innerText = quantity;
                 price = 3.3 * quantity;
                 priceElement.innerText = price.toFixed(2) + '€';
+                cartContentDiv.innerText = quantity;
+
             }
 
             btnMinus.addEventListener('click', function () {
