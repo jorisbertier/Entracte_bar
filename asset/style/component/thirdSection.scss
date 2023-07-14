@@ -93,6 +93,32 @@
     }
 }
 
+.discoverShop {
+    background-color: $background-color !important;
+    h2 {
+        font-weight: 800;
+        font-size: 60px;
+        color: $main-color;
+    }
+    div .yo {
+        height: 400px;
+        width: 50px !important;
+        flex: 1;
+        transition: .3s;
+        object-fit: cover;
+        border-radius: 30px;
+    
+        &:hover {
+            flex: 3;
+        }
+    }
+}
+@media (max-width:1175px) {
+    .discoverShop {
+        visibility: hidden;
+        height: 0;
+    }
+}
 @media (max-width: 1150px) {
     .third {
         h2 {
@@ -121,26 +147,6 @@
 
         .titleChange2 {
             margin-left: 400px !important;
-        }
-    }
-}
-.discoverShop {
-    background-color: $background-color !important;
-    h2 {
-        font-weight: 800;
-        font-size: 60px;
-        color: $main-color;
-    }
-    div .yo {
-        height: 400px;
-        width: 25px;
-        flex: 1;
-        transition: .3s;
-        object-fit: cover;
-        border-radius: 30px;
-    
-        &:hover {
-            flex: 4;
         }
     }
 }

@@ -63,7 +63,20 @@
             font-size: 25px;
         }
     }
+}
 
+.card .buy:hover {
+    background-color: $secondary-color;
+    opacity: 0.7 !important;
+}
+
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    .card-button {
+        opacity: 1;
+
+    }
 }
 
 @media (max-width: 700px) {

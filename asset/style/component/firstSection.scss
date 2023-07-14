@@ -151,16 +151,37 @@
 @media(max-width:490px) {
     .discover {
         h2 {
-            font-size: 25px;
+            font-size: 20px;
         }
 
         p {
-            font-size: 12px;
+            font-size: 10px;
         }
 
         .imgDiscover {
-            height: 370px;
-            width: 200px;
+            height: 320px;
+            width: 150px;
+        }
+
+        .button {
+            margin-top: 5px !important;
+            font-size: 12px;
+        }
+    }
+    .text1,
+    .text2 {
+        // margin-left: 50px;
+        // top: -600px;
+        font-size: 40px !important;
+    }
+    .image-container {
+        .text-container {
+            width: 230px;
+            height: 160px;
+
+            p {
+                font-size: 10px;
+            }
         }
     }
 

@@ -54,6 +54,7 @@ header ul li a {
   color: white !important;
 }
 header ul li i {
+  color: white;
   font-size: 25px;
 }
 header ul ul li a:hover {
@@ -82,10 +83,8 @@ header.sticky ul li a,
 header.sticky .logo {
   color: #0A0406 !important;
 }
-header.sticky ul li a {
-  font-size: 15px;
-  font-weight: 500;
-  transition: 0.5;
+header.sticky ul li i {
+  color: #0A0406;
 }
 header.sticky ul li a:hover {
   color: #A6733D !important;
@@ -153,6 +152,27 @@ header.sticky ul li a:hover {
   color: #0A0406;
 }
 
+li {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 21px !important;
+  height: 21px !important;
+  border-radius: 50% !important;
+  background-color: #D2BBA0;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
 @media (max-width: 800px) {
   header {
     height: 100px;
@@ -179,7 +199,7 @@ header.sticky ul li a:hover {
     right: 0;
     width: 100%;
     padding: 20px;
-    backdrop-filter: blur(5px);
+    background-color: #A6733D;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 999;
   }
@@ -195,27 +215,6 @@ header.sticky ul li a:hover {
     pointer-events: auto;
   }
 }
-li {
-  position: relative;
-}
-
-.badge {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  width: 21px !important;
-  height: 21px !important;
-  border-radius: 50% !important;
-  background-color: #D2BBA0;
-  color: white;
-  text-align: center;
-  line-height: 20px;
-}
-
-body.menu-open {
-  overflow: hidden;
-}
-
 body {
   background-color: #0A0406 !important;
   color: white;
@@ -234,7 +233,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Couleur d'arrière-plan semi-transparente */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Couleur d'arrière-plan semi-transparente */
   z-index: 1;
 }
 
@@ -290,6 +290,9 @@ body {
   font-size: 50px;
   font-weight: 100;
   text-transform: uppercase;
+}
+.textOverlay a {
+  text-decoration: none;
 }
 
 section {
@@ -468,14 +471,29 @@ section {
 }
 @media (max-width: 490px) {
   .discover h2, .discover .h2 {
-    font-size: 25px;
+    font-size: 20px;
   }
   .discover p {
-    font-size: 12px;
+    font-size: 10px;
   }
   .discover .imgDiscover {
-    height: 370px;
-    width: 200px;
+    height: 320px;
+    width: 150px;
+  }
+  .discover .button {
+    margin-top: 5px !important;
+    font-size: 12px;
+  }
+  .text1,
+  .text2 {
+    font-size: 40px !important;
+  }
+  .image-container .text-container {
+    width: 230px;
+    height: 160px;
+  }
+  .image-container .text-container p {
+    font-size: 10px;
   }
 }
 .secondSection .row div {
@@ -605,6 +623,32 @@ section {
   font-size: 0.9em;
 }
 
+.discoverShop {
+  background-color: #0A0406 !important;
+}
+.discoverShop h2, .discoverShop .h2 {
+  font-weight: 800;
+  font-size: 60px;
+  color: white;
+}
+.discoverShop div .yo {
+  height: 400px;
+  width: 50px !important;
+  flex: 1;
+  transition: 0.3s;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.discoverShop div .yo:hover {
+  flex: 3;
+}
+
+@media (max-width: 1175px) {
+  .discoverShop {
+    visibility: hidden;
+    height: 0;
+  }
+}
 @media (max-width: 1150px) {
   .third h2, .third .h2 {
     font-size: 70px;
@@ -627,26 +671,6 @@ section {
     margin-left: 400px !important;
   }
 }
-.discoverShop {
-  background-color: #0A0406 !important;
-}
-.discoverShop h2, .discoverShop .h2 {
-  font-weight: 800;
-  font-size: 60px;
-  color: white;
-}
-.discoverShop div .yo {
-  height: 400px;
-  width: 25px;
-  flex: 1;
-  transition: 0.3s;
-  object-fit: cover;
-  border-radius: 30px;
-}
-.discoverShop div .yo:hover {
-  flex: 4;
-}
-
 .card {
   border: none !important;
   border-radius: 20px !important;
@@ -705,6 +729,18 @@ section {
 .card .buy i {
   font-weight: 800 !important;
   font-size: 25px;
+}
+
+.card .buy:hover {
+  background-color: #D2BBA0;
+  opacity: 0.7 !important;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card:hover .card-button {
+  opacity: 1;
 }
 
 @media (max-width: 700px) {
@@ -766,6 +802,7 @@ section {
 footer {
   background-color: #0A0406;
   color: white !important;
+  width: 100%;
 }
 footer a {
   text-decoration: none;
@@ -802,36 +839,34 @@ footer__i {
   line-height: 1.05;
 }
 
-.container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
+.sectionProduct {
   background-color: white;
   color: #0A0406;
 }
-.container-fluid .beerCorona, .container-xxl .beerCorona, .container-xl .beerCorona, .container-lg .beerCorona, .container-md .beerCorona, .container-sm .beerCorona {
+.sectionProduct .beerCorona {
   height: 800px;
   width: 200px;
 }
-.container-fluid .flag, .container-xxl .flag, .container-xl .flag, .container-lg .flag, .container-md .flag, .container-sm .flag,
-.container-fluid .beer,
-.container-xxl .beer,
-.container-xl .beer,
-.container-lg .beer,
-.container-md .beer,
-.container-sm .beer {
+.sectionProduct .flag,
+.sectionProduct .beer {
   width: 30px;
   height: 30px;
 }
-.container-fluid .country, .container-xxl .country, .container-xl .country, .container-lg .country, .container-md .country, .container-sm .country {
+.sectionProduct .country {
   font-weight: 600;
   font-size: 18px;
 }
-.container-fluid .textCorona p, .container-xxl .textCorona p, .container-xl .textCorona p, .container-lg .textCorona p, .container-md .textCorona p, .container-sm .textCorona p {
+.sectionProduct .textCorona p {
   color: #0A0406 !important;
   margin-right: 70px;
 }
-.container-fluid .textCorona div, .container-xxl .textCorona div, .container-xl .textCorona div, .container-lg .textCorona div, .container-md .textCorona div, .container-sm .textCorona div {
+.sectionProduct .textCorona div {
   color: #0A0406;
 }
 
+.selection {
+  background-color: white !important;
+}
 .selection h3, .selection .h3 {
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -841,18 +876,6 @@ footer__i {
   font-weight: 900;
   line-height: 1.05;
   color: #D2BBA0;
-}
-
-.buy:hover {
-  background-color: white;
-  opacity: 0.7;
-}
-
-.card:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-.card:hover .card-button {
-  opacity: 1;
 }
 
 .bottle .size {
@@ -915,6 +938,7 @@ footer__i {
   border-radius: 5px;
   font-size: 18px;
   width: 100%;
+  transition: 0.3s;
 }
 .buttonAdd:hover {
   opacity: 0.5;
