@@ -4,7 +4,7 @@
 
 1. Clonez ou téléchargez le repository GitHub dans le dossier voulu :
 
-    git clone 
+    git clone https://github.com/jorisbertier/Entracte_bar.git
 
 2. Téléchargez et installez les dépendances du projet avec Node(diposer de node) :
 
