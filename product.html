@@ -10,10 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="build/style.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="script.js" defer></script>
 </head>
 
-<body>
-    <header>
+<body id="body">
+    <header class="header">
         <a href="#" class="logo"><img src="asset/style/img/logo1.png"></a>
         <label for="menu-toggle" class="menu-hamburger">&#9776;</label>
         <div class="menu-bg"></div>
@@ -113,12 +114,12 @@
                 <div class="card text-center" style="width: 18rem;">
                     <span class="pt-3"></span>
                     <div class="text-center">
-                        <img class="card-img-top" src="asset/style/img/corona.png" alt="Card image cap">
+                        <img class="card-img-top" src="asset/style/img/beer/cuveeTroll.png" alt="Card image cap">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title text-center mb-3">CORONA</h5>
-                        <h6>BIERE BLONDE</h6>
-                        <p class="card-text">4.6°</p>
+                        <h5 class="card-title text-center mb-3">Cuvée des trolls</h5>
+                        <h6>PALE ALE</h6>
+                        <p class="card-text">7°</p>
                         <div class="d-flex justify-content-center card-button"><a href="#" class="btn buy">SHOP<i
                                     class="bi bi-cart2 ms-2"></i></a></div>
                     </div>
@@ -129,12 +130,12 @@
                 <div class="card text-center" style="width: 18rem;">
                     <span class="pt-3"></span>
                     <div class="text-center">
-                        <img class="card-img-top" src="asset/style/img/corona.png" alt="Card image cap">
+                        <img class="card-img-top" src="asset/style/img/beer/bintang.png" alt="Card image cap">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title text-center mb-3">CORONA</h5>
-                        <h6>BIERE BLONDE</h6>
-                        <p class="card-text">4.6°</p>
+                        <h5 class="card-title text-center mb-3">Bintang</h5>
+                        <h6>PILSNER</h6>
+                        <p class="card-text">4.8°</p>
                         <div class="d-flex justify-content-center card-button"><a href="#" class="btn buy">SHOP<i
                                     class="bi bi-cart2 ms-2"></i></a></div>
                     </div>
@@ -145,12 +146,12 @@
                 <div class="card text-center" style="width: 18rem;">
                     <span class="pt-3"></span>
                     <div class="text-center">
-                        <img class="card-img-top" src="asset/style/img/corona.png" alt="Card image cap">
+                        <img class="card-img-top" src="asset/style/img/beer/deliriumpng.png" alt="Card image cap">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title text-center mb-3">CORONA</h5>
-                        <h6>BIERE BLONDE</h6>
-                        <p class="card-text">4.6°</p>
+                        <h5 class="card-title text-center mb-3">Delirium</h5>
+                        <h6>PALE ALE</h6>
+                        <p class="card-text">8.5°</p>
                         <div class="d-flex justify-content-center card-button"><a href="#" class="btn buy">SHOP<i
                                     class="bi bi-cart2 ms-2"></i></a></div>
                     </div>
@@ -161,12 +162,12 @@
                 <div class="card text-center" style="width: 18rem;">
                     <span class="pt-3"></span>
                     <div class="text-center">
-                        <img class="card-img-top" src="asset/style/img/corona.png" alt="Card image cap">
+                        <img class="card-img-top" src="asset/style/img/beer/brasserie-du-mont-blanc.png" alt="Card image cap">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title text-center mb-3">CORONA</h5>
-                        <h6>BIERE BLONDE</h6>
-                        <p class="card-text">4.6°</p>
+                        <h5 class="card-title text-center mb-3">MONT-BLANC</h5>
+                        <h6>PALE ALE</h6>
+                        <p class="card-text">5.8°</p>
                         <div class="d-flex justify-content-center card-button"><a href="#" class="btn buy">SHOP<i
                                     class="bi bi-cart2 ms-2"></i></a></div>
                     </div>
@@ -292,38 +293,6 @@
     </footer>
 
     <script>
-
-        //navbar
-        window.addEventListener("scroll", function () {
-            let header = document.querySelector('header');
-            header.classList.toggle('sticky', window.scrollY > 0);
-        })
-
-        const menuToggle = document.querySelector('.menu-hamburger');
-        const menuBg = document.querySelector('.menu-bg');
-        const menu = document.querySelector('.menu');
-
-        menuToggle.addEventListener('click', function () {
-            menu.classList.toggle('menu-open');
-            menuBg.classList.toggle('menu-bg-open');
-            document.body.classList.toggle('menu-open');
-        });
-
-        menuBg.addEventListener('click', function () {
-            menu.classList.remove('menu-open');
-            menuBg.classList.remove('menu-bg-open');
-            document.body.classList.remove('menu-open');
-        });
-
-        menu.addEventListener('click', function (event) {
-            // Vérifie si un lien à l'intérieur du menu a été cliqué
-            if (event.target.tagName === 'A') {
-                menu.classList.remove('menu-open');
-                menuBg.classList.remove('menu-bg-open');
-                document.body.classList.remove('menu-open');
-            }
-        });
-
 
         // button quantity
 
