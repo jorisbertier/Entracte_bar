@@ -65,7 +65,7 @@ window.addEventListener("scroll", function () {
     if (window.pageYOffset > stickySectionPosition) {
         stickySection.style.position = "fixed";
         stickySection.style.top = "0";
-        stickySection.style.right = "0"; // Add this line to position the sticky section on the right side
+        stickySection.style.right = "0";
     } else {
         stickySection.style.position = "static";
     }
@@ -75,24 +75,22 @@ window.addEventListener('resize', function () {
     var windowHeight = window.innerHeight;
 
     if (windowHeight < 1000) {
-        // Réduire la taille du premier élément lorsque la hauteur est inférieure à 1000px
         document.querySelector('#sticky-section h3:nth-child(1)').style.fontSize = '14px';
     } else {
-        document.querySelector('#sticky-section h3:nth-child(1)').style.fontSize = ''; // Remettre la taille par défaut
+        document.querySelector('#sticky-section h3:nth-child(1)').style.fontSize = '';
     }
 
     if (windowHeight >= 1000 && windowHeight < 1500) {
         // Réduire la taille du deuxième élément lorsque la hauteur est comprise entre 1000px et 1500px
         document.querySelector('#sticky-section h3:nth-child(2)').style.fontSize = '14px';
     } else {
-        document.querySelector('#sticky-section h3:nth-child(2)').style.fontSize = ''; // Remettre la taille par défaut
+        document.querySelector('#sticky-section h3:nth-child(2)').style.fontSize = '';
     }
 
     if (windowHeight >= 1500) {
-        // Réduire la taille du troisième élément lorsque la hauteur est supérieure à 1500px
         document.querySelector('#sticky-section h3:nth-child(3)').style.fontSize = '14px';
     } else {
-        document.querySelector('#sticky-section h3:nth-child(3)').style.fontSize = ''; // Remettre la taille par défaut
+        document.querySelector('#sticky-section h3:nth-child(3)').style.fontSize = '';
     }
 });
 
